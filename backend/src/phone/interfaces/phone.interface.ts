@@ -1,5 +1,6 @@
-export interface Phone{
-    readonly brand: string;
-    readonly model: string
-    readonly price: number
+export interface Phone {
+  readonly id: string;
+  readonly brand: string;
+  readonly phoneModel: string;
+  readonly price: number;
 }
