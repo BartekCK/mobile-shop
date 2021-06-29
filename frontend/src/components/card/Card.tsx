@@ -8,6 +8,8 @@ import { ApiResourcesURL } from '../../core/api';
 
 // styles
 import './styles.scss';
+import { useDispatch } from 'react-redux';
+import { Product } from '../../core/store/actions';
 
 type Props = {
   phone: IPhone;
@@ -15,6 +17,12 @@ type Props = {
 
 const Card: React.FC<Props> = ({ phone }: Props) => {
   const { id, brand, phoneModel, price, path } = phone;
+
+  const dispatch = useDispatch();
+
+  const handleClick = (): void => {
+    dispatch(Product.addProduct({ id, brand, phoneModel, price, path, count: 1 }));
+  };
 
   return (
     <section className="card--wrapper">
@@ -24,8 +32,8 @@ const Card: React.FC<Props> = ({ phone }: Props) => {
         <figcaption className="model">Model: {phoneModel}</figcaption>
       </figure>
       <footer className="footer--container">
-          <span className="price">{price} USD</span>
-        <button className="btn" type="button">
+        <span className="price">{price} USD</span>
+        <button className="btn" type="button" onClick={handleClick}>
           ADD +
         </button>
       </footer>

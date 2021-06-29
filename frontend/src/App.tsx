@@ -4,12 +4,16 @@ import React from 'react';
 import GridCard from './containers/grid-card';
 import Navigation from './containers/navigation';
 
+// store
+import { Provider } from 'react-redux';
+import { store } from './core/store';
+
 function App() {
   return (
-    <React.Fragment>
+    <Provider store={store}>
       <Navigation />
       <GridCard />
-    </React.Fragment>
+    </Provider>
   );
 }
 
