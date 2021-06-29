@@ -1,0 +1,17 @@
+.nav-list--wrapper {
+  height: 250px;
+  width: 250px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  background: white;
+  position: absolute;
+  top: 75%;
+  right: 75%;
+  display: none;
+  z-index: 1;
+
+  transition: opacity 1s ease-in-out;
+
+  &.visible {
+    display: block;
+  }
+}

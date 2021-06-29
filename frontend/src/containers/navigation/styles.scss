@@ -1,0 +1,28 @@
+.navigation--wrapper {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px -4px #0000001f;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  > .basket--btn {
+    padding: 5px;
+    font-size: 20px;
+    border-color: #5656ff;
+
+    > i {
+      cursor: pointer;
+    }
+
+    position: relative;
+
+
+    &:hover {
+      box-shadow: 0 6px 6px -6px #00001f;
+    }
+
+  }
+}
