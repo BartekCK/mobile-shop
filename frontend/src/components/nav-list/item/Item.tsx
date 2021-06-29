@@ -38,7 +38,7 @@ const Item: React.FC<Props> = ({ product }: Props) => {
       <span className="title">
         {brand} {phoneModel}
       </span>
-      <span className="count">Count: {count}</span>
+      <span className="count">Quantity: {count}</span>
       <span className="price">{result.toFixed(2)} $</span>
       <div className="btn--container">
         <button type="button" className="btn btn-secondary" onClick={handleAdd}>
