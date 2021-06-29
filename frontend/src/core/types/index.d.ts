@@ -14,7 +14,7 @@ export interface IAction<T = Partial<IProduct>> {
 }
 
 export interface IStore {
-  items: any[];
+  products: IProduct[];
 }
 
 export interface IProduct {

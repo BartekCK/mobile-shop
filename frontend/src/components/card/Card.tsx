@@ -33,7 +33,7 @@ const Card: React.FC<Props> = ({ phone }: Props) => {
       </figure>
       <footer className="footer--container">
         <span className="price">{price} USD</span>
-        <button className="btn" type="button" onClick={handleClick}>
+        <button className="btn btn-secondary" type="button" onClick={handleClick}>
           ADD +
         </button>
       </footer>
