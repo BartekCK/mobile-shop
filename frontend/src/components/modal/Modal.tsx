@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 
 // components
 import Portal from '../portal';
@@ -15,13 +15,9 @@ type Props = {
 const Modal: React.FC<Props> = (props: Props) => {
   const { isVisible, children, onClose } = props;
 
-  const handleClickOutside = (event: any): void => {
-    onClose();
-  };
-
   return (
     <Portal>
-      <div className={`modal--wrapper ${isVisible ? 'visible' : ''}`} onClick={handleClickOutside}>
+      <div className={`modal--wrapper ${isVisible ? 'visible' : ''}`} onClick={onClose}>
         <div className="modal-container" onClick={(event) => event.stopPropagation()}>
           <button className="close" onClick={onClose}>
             <i className="far fa-window-close" />
