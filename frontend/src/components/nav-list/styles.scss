@@ -1,4 +1,7 @@
 .nav-list--wrapper {
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
   max-height: 400px;
   overflow-y: auto;
   box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
@@ -15,5 +18,15 @@
   &.visible {
     transform: scale(1,1);
     opacity: 1;
+  }
+
+  >.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    >.total-price{
+
+    }
   }
 }
