@@ -1,0 +1,17 @@
+@import 'src/styles/constansts';
+
+.grid--wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  justify-items: center;
+  align-items: center;
+
+  @media (max-width: $md) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: $xl) {
+    grid-template-columns: repeat(3, 1fr);  }
+}
