@@ -1,4 +1,5 @@
-const getPhones = (phoneId?: string) =>
-  phoneId ? `api/phones/${phoneId}` : "api/phones";
+const getPhones = (phoneId?: string) => (phoneId ? `api/phones/${phoneId}` : 'api/phones');
 
-export const Route = { getPhones };
+const postPurchase = () => `api/payments/session`;
+
+export const Route = { getPhones, postPurchase };

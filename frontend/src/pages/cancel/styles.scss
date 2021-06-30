@@ -1,0 +1,26 @@
+.cancel--page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  >.title{
+    font-weight: bold;
+    font-size: 34px;
+    padding: 30px;
+  }
+
+  >.cancel-img{
+    border-radius: 25px;
+  }
+
+  >.redirect-inf{
+    font-size: 15px;
+    font-style: italic;
+
+    > span {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,20 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// containers
-import GridCard from './containers/grid-card';
-import Navigation from './containers/navigation';
+// pages
+import IndexPage from './pages/index';
+import SuccessPage from './pages/success';
+import CancelPage from './pages/cancel';
 
-// store
-import { Provider } from 'react-redux';
-import { store } from './core/store';
-
-function App() {
+const App: React.FC = () => {
   return (
-    <Provider store={store}>
-      <Navigation />
-      <GridCard />
-    </Provider>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <IndexPage />
+        </Route>
+        <Route path="/success">
+          <SuccessPage />
+        </Route>
+        <Route path="/cancel">
+          <CancelPage />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { DatabaseModule } from './database/database.module';
 import { PhoneModule } from './phone/phone.module';
+import { PaymentModule } from './payments/payment.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { PhoneModule } from './phone/phone.module';
       serveRoot: '/resources',
     }),
     PhoneModule,
+    PaymentModule,
   ],
   controllers: [],
   providers: [],
